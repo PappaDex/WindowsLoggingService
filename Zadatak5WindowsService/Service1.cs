@@ -21,11 +21,12 @@ namespace Zadatak5WindowsService
         protected override void OnStart(string[] args)
         {
             Timer_Console.Timer.WriteToFile("-Servis je pokrenut");
+            Timer_Console.Timer.ScheduleService();
         }
 
         protected override void OnStop()
         {
-            Timer_Console.Timer.WriteToFile("-Servis je zaustavljen");
+            Timer_Console.Timer.ScheduleService();
         }
     }
 }
